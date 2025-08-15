@@ -4,15 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Submit Data</title>
+  <link rel="stylesheet" href="/src/styles.css">
 </head>
-<body>
-  <h1>Send Data to Express API</h1>
-  <form id="dataForm">
-    <label for="textInput">Enter text:</label>
-    <input type="text" id="textInput" name="textInput" required>
-    <button type="submit">Submit</button>
-  </form>
-  <div id="response"></div>
+<body style="background:#f7f7fa;">
+  <nav style="background:#f5e9d4;color:#222;padding:1em 0;display:flex;justify-content:center;gap:2em;">
+  <a href="#" style="color:#000;text-decoration:none;font-weight:bold;">Home</a>
+  <a href="#" style="color:#000;text-decoration:none;">About</a>
+  <a href="#" style="color:#000;text-decoration:none;">Info</a>
+  <a href="contact.html" style="color:#000;text-decoration:none;">Contact</a>
+  </nav>
+  <header style="background:#4a90e2;color:#fff;padding:3em 0;text-align:center;">
+    <h1 style="margin:0;font-size:7rem;font-family:'Cormorant Garamond',serif;">Welcome to Your Homepage</h1>
+    <p class="large" style="margin-top:1em;">A simple Express & HTML demo with API integration</p>
+  </header>
+  <main style="padding:2em;text-align:center;">
+    <h2>Send Data to Express API</h2>
+    <form id="dataForm" style="margin:2em auto;max-width:400px;display:flex;flex-direction:column;gap:1em;">
+      <label for="textInput">Enter text:</label>
+      <input type="text" id="textInput" name="textInput" required style="padding:0.5em;font-size:1em;">
+      <button type="submit" style="padding:0.7em;background:#4a90e2;color:#fff;border:none;font-size:1em;cursor:pointer;">Submit</button>
+    </form>
+    <div id="response" style="margin-top:1em;color:#4a90e2;font-weight:bold;"></div>
+  </main>
+  <footer style="background:#222;color:#fff;padding:2em 0;text-align:center;">
+    <div style="margin-bottom:1em;">Connect with us:</div>
+    <div style="display:flex;justify-content:center;gap:1em;">
+      <a href="https://github.com" target="_blank"><img class="socialIcon" src="images/socials/github.svg" alt="GitHub"></a>
+      <a href="https://twitter.com" target="_blank"><img class="socialIcon" src="images/socials/twitter.svg" alt="Twitter"></a>
+      <a href="https://linkedin.com" target="_blank"><img class="socialIcon" src="images/socials/linkedin.svg" alt="LinkedIn"></a>
+      <a href="https://youtube.com" target="_blank"><img class="socialIcon" src="images/socials/youtube.svg" alt="YouTube"></a>
+      <a href="mailto:info@example.com" target="_blank"><img class="socialIcon" src="images/socials/envelope.svg" alt="Email"></a>
+    </div>
+    <div style="margin-top:1em;font-size:0.9em;">&copy; 2025 Your Company</div>
+  </footer>
   <script>
     document.getElementById('dataForm').addEventListener('submit', async function(e) {
       e.preventDefault();
